@@ -19,7 +19,6 @@ p {
 
 .active {
   background-color: #eee;
-  order: -1;
 }
 
 .attribution {

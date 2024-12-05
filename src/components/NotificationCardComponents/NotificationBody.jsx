@@ -1,8 +1,8 @@
 import NotificationType from "./NotificationType";
 import Target from "./Target";
 import Username from "./Username";
-function NotificationBody({ notificationObject }) {
-  let { username, notificationType, target, readStatus } = notificationObject;
+function NotificationBody({ notificationObject, isRead }) {
+  let { username, notificationType, target } = notificationObject;
   return (
     <div className="notificationBody">
       <Username username={username} />
@@ -10,7 +10,7 @@ function NotificationBody({ notificationObject }) {
       <Target
         notificationType={notificationType}
         target={target}
-        readStatus={readStatus}
+        readStatus={isRead}
       />
     </div>
   );
