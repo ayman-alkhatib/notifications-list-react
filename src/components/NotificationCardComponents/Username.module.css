@@ -1,0 +1,4 @@
+.username:hover {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
