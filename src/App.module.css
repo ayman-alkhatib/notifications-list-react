@@ -13,57 +13,9 @@
     border-radius: 25px;
 }
 
-.header {
-    padding: 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.header h1 span {
-    color: white;
-    background-color: hsl(219, 85%, 26%);
-    font-size: 20px;
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-
-.header button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    color: hsl(219, 12%, 42%)
-}
-
-.container main {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.header button:hover {
-    color: hsl(219, 85%, 26%);
-}
-
-
 @media screen and (max-width:690px) {
     .container {
         width: 100%;
         margin-top: 0;
-    }
-
-
-}
-
-@media screen and (max-width:475px) {
-    .header h1 {
-        font-size: 19px;
-    }
-
-    .header h1 span {
-        font-size: 18px;
     }
 }

@@ -1,4 +1,4 @@
-export const notificationData = [
+export const notificationsData = [
     {
         id: 1,
         avatar: "/images/avatar-mark-webber.webp",
