@@ -1,10 +1,13 @@
 import styles from "./Header.module.css";
 import { notificationsData } from "../notificationsData";
+import { useState } from "react";
 function Header({ setMarkAllAsUnRead }) {
-  const notificationActiveNum = notificationsData.reduce((prev, cur) => {
-    if (cur.readStatus) return (prev = prev + 1);
-    return prev;
-  }, 0);
+  const [notificationActiveNum, setNotificationActiveNum] = useState(
+    notificationsData.reduce((prev, cur) => {
+      if (!cur.readStatus) return (prev = prev + 1);
+      return prev;
+    }, 0)
+  );
   return (
     <header className={styles.header}>
       <h1>
@@ -14,6 +17,7 @@ function Header({ setMarkAllAsUnRead }) {
       <button
         onClick={() => {
           setMarkAllAsUnRead(true);
+          setNotificationActiveNum(0);
         }}
       >
         Mark all as read
