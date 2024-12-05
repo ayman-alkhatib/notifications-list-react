@@ -32,8 +32,12 @@ function App() {
             key={notificationObject.id} />
           ))}
         </main>
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://www.linkedin.com/in/ayman---alkhatib" target="_blank">Ayman Alkhatib</a>.
+        </div>
       </div>
-    </div>
+    </div >
   );
 }
 
