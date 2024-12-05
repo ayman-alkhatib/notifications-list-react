@@ -1,0 +1,9 @@
+.picture {
+    margin-left: auto;
+    margin-top: auto;
+    width: 70px;
+}
+
+.picture img {
+    width: 100%;
+}
