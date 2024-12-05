@@ -1,7 +1,7 @@
 import Avatar from "./Avatar";
-import styles from "./Notification.module.css";
+import styles from "./NotificationCard.module.css";
 
-function Notification({ markAllAsUnRead, notificationObject }) {
+function NotificationCard({ markAllAsUnRead, notificationObject }) {
   let {
     id,
     avatar,
@@ -52,4 +52,4 @@ function Notification({ markAllAsUnRead, notificationObject }) {
     </div>
   );
 }
-export default Notification;
+export default NotificationCard;
