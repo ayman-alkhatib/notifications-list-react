@@ -1,54 +1,21 @@
-import Avatar from "./Avatar";
+import Avatar from "./NotificationCardComponents/Avatar";
 import styles from "./NotificationCard.module.css";
+import PostPicture from "./NotificationCardComponents/PostPicture";
+import TextBox from "./NotificationCardComponents/TextBox";
 
 function NotificationCard({ markAllAsUnRead, notificationObject }) {
-  let {
-    id,
-    avatar,
-    username,
-    notificationType,
-    target,
-    messagePreview,
-    readStatus,
-    timestamp,
-  } = notificationObject;
-  if (markAllAsUnRead && !readStatus) {
-    readStatus = true;
-  }
+  let { id, avatar, notificationType, readStatus } = notificationObject;
+
+  if (markAllAsUnRead && !readStatus) readStatus = true;
+
   return (
     <div
       id={id}
       className={`${styles.notification} ${readStatus ? "" : "active"}`}
     >
       <Avatar imgSrc={avatar} />
-      <div className={styles.textBox}>
-        <div className="notificationBody">
-          <span className={styles.username}>
-            <strong> {username} </strong>
-          </span>
-          <span className={styles.notificationType}> {notificationType} </span>
-
-          <span
-            className={styles.target}
-            style={{
-              color: notificationType.toLowerCase().includes("group")
-                ? "hsl(219, 85%, 26%)"
-                : "hsl(219, 12%, 42%)",
-            }}
-          >
-            {target}
-            {!readStatus && <span className={styles.activeNotification}></span>}
-          </span>
-        </div>
-        <span className={styles.timestamp}> {timestamp} </span>
-        {messagePreview && <p> {messagePreview} </p>}
-      </div>
-
-      {notificationType.toLowerCase().includes("picture") && (
-        <div className={styles.picture}>
-          <img src="images/image-chess.webp" alt="chess" />
-        </div>
-      )}
+      <TextBox notificationObject={notificationObject} />
+      <PostPicture notificationType={notificationType} />
     </div>
   );
 }
