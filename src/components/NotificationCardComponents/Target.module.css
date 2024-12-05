@@ -1,0 +1,18 @@
+.target {
+    font-weight: bold;
+}
+
+.target:hover {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+.activeNotification {
+    display: inline-block;
+    background-color: hsl(1, 90%, 64%);
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
