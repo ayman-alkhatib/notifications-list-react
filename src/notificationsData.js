@@ -6,7 +6,7 @@ export const notificationData = [
         notificationType: "reacted to your recent post",
         target: "My first tournament today!",
         messagePreview: "",
-        readStatus: false,
+        readStatus: true,
         timestamp: "1m ago"
     },
     {
@@ -16,7 +16,7 @@ export const notificationData = [
         notificationType: "followed you",
         target: "",
         messagePreview: "",
-        readStatus: false,
+        readStatus: true,
         timestamp: "5m ago"
     },
     {
@@ -26,7 +26,7 @@ export const notificationData = [
         notificationType: "has joined your group",
         target: "Chess Club",
         messagePreview: "",
-        readStatus: false,
+        readStatus: true,
         timestamp: "1 day ago"
     },
     {
@@ -46,7 +46,7 @@ export const notificationData = [
         notificationType: "commented on your picture",
         target: "",
         messagePreview: "",
-        readStatus: true,
+        readStatus: false,
         timestamp: "1 week ago"
     },
     {
@@ -56,7 +56,7 @@ export const notificationData = [
         notificationType: "reacted to your recent post",
         target: "5 end-game strategies to increase your win rate",
         messagePreview: "",
-        readStatus: true,
+        readStatus: false,
         timestamp: "2 weeks ago"
     },
     {
@@ -66,7 +66,7 @@ export const notificationData = [
         notificationType: "left the group",
         target: "Chess Club",
         messagePreview: "",
-        readStatus: true,
+        readStatus: false,
         timestamp: "2 weeks ago"
     }
 ];
