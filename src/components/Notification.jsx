@@ -16,7 +16,7 @@ function Notification({ notificationObject }) {
   return (
     <div
       id={id}
-      className={`${styles.notification} ${readStatus ? styles.active : ""}`}
+      className={`${styles.notification} ${readStatus ? "active" : ""}`}
     >
       <Avatar imgSrc={avatar} />
       <div className={styles.textBox}>

@@ -8,14 +8,8 @@
 }
 
 
-.active {
-    background-color: #eee;
-}
 
 
-/* .notification span {
-    text-wrap: nowrap;
-} */
 
 .textBox {
     display: flex;
