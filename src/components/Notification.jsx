@@ -24,7 +24,20 @@ function Notification({ notificationObject }) {
           <strong> {username} </strong>
         </span>
         <span className={styles.notificationType}> {notificationType} </span>
-        {target && <span className={styles.target}> {target} </span>}
+        {readStatus && <span className={styles.activeNotification}></span>}
+        {target && (
+          <span
+            className={styles.target}
+            style={{
+              color: notificationType.toLowerCase().includes("group")
+                ? "hsl(219, 85%, 26%)"
+                : "",
+            }}
+          >
+            {" "}
+            {target}{" "}
+          </span>
+        )}
         <span className={styles.timestamp}> {timestamp} </span>
         {messagePreview && <p> {messagePreview} </p>}
       </div>
