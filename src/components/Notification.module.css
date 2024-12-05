@@ -7,6 +7,10 @@
     margin: 10px;
 }
 
+.username {
+    /* font-size: 15px; */
+}
+
 .textBox {
     display: flex;
     flex-direction: column;
@@ -16,6 +20,18 @@
 
 .notificationType {
     color: hsl(219, 12%, 42%);
+    font-size: 15px;
+
+}
+
+.picture {
+    margin-left: auto;
+    margin-top: auto;
+    width: 70px;
+}
+
+.picture img {
+    width: 100%;
 }
 
 .target {

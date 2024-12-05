@@ -35,14 +35,18 @@ function Notification({ notificationObject }) {
                   : "hsl(219, 12%, 42%)",
               }}
             >
-              {" "}
-              {target}{" "}
+              {target}
             </span>
           )}
         </div>
         <span className={styles.timestamp}> {timestamp} </span>
         {messagePreview && <p> {messagePreview} </p>}
       </div>
+      {notificationType.toLowerCase().includes("picture") && (
+        <div className={styles.picture}>
+          <img src="images/image-chess.webp" alt="chess" />
+        </div>
+      )}
     </div>
   );
 }
