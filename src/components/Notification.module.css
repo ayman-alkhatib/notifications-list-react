@@ -7,18 +7,12 @@
     margin: 10px;
 }
 
-
-
-
-
 .textBox {
     display: flex;
     flex-direction: column;
     gap: 5px;
     align-items: flex-start;
 }
-
-
 
 .notificationType {
     color: hsl(219, 12%, 42%);
@@ -48,4 +42,19 @@
     width: 10px;
     height: 10px;
     border-radius: 25px;
+}
+
+.username:hover {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+.target:hover {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+.notification p:hover {
+    background-color: #eee;
+    cursor: pointer;
 }
