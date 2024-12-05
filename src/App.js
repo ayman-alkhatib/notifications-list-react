@@ -6,13 +6,9 @@ import { useState } from "react";
 
 
 function App() {
-  const [notificationDataState, setNotificationDataState] = useState(notificationData)
-  function handleMarkAllASUnRead() {
-    setNotificationDataState((state) => {
-      return state.map((notificationObject) => { return { ...notificationObject, readStatus: false } })
-    })
-  }
-  const notificationActiveNum = notificationDataState.reduce((prev, cur) => {
+  const [markAllAsUnRead, setMarkAllAsUnRead] = useState(false)
+
+  const notificationActiveNum = notificationData.reduce((prev, cur) => {
     if (cur.readStatus) return prev = prev + 1
     return prev
   }, 0)
@@ -22,13 +18,16 @@ function App() {
         <header className={styles.header}>
           <h1>Notifications <span>{notificationActiveNum}</span></h1>
 
-          <button onClick={handleMarkAllASUnRead}>Mark all as read</button>
+          <button onClick={() => {
+            setMarkAllAsUnRead(true)
+          }}>Mark all as read</button>
         </header>
 
         <main>
-          {notificationDataState.map(notificationObject =>
+          {notificationData.map(notificationObject =>
           (<Notification
             notificationObject={notificationObject}
+            markAllAsUnRead={markAllAsUnRead}
             key={notificationObject.id} />
           ))}
         </main>

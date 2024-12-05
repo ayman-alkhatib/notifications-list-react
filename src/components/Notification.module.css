@@ -47,17 +47,16 @@
     color: hsl(219, 12%, 42%);
     padding: 20px;
     border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
 
 .activeNotification {
+    display: inline-block;
     background-color: hsl(1, 90%, 64%);
     width: 10px;
     height: 10px;
     border-radius: 25px;
+    flex-shrink: 0;
+    margin-left: 10px;
 }
 
 .username:hover {
