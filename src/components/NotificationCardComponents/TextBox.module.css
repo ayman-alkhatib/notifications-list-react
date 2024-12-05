@@ -1,0 +1,22 @@
+.textBox {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.timestamp {
+    color: hsl(219, 12%, 42%);
+}
+
+.textBox p {
+    border: 2px solid hsl(205, 33%, 90%);
+    color: hsl(219, 12%, 42%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.textBox p:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
