@@ -1,7 +1,7 @@
 export const notificationsData = [
     {
         id: 1,
-        avatar: "/images/avatar-mark-webber.webp",
+        avatar: "./images/avatar-mark-webber.webp",
         username: "Mark Webber",
         notificationType: "reacted to your recent post",
         target: "My first tournament today!",
@@ -11,7 +11,7 @@ export const notificationsData = [
     },
     {
         id: 2,
-        avatar: "/images/avatar-angela-gray.webp",
+        avatar: "./images/avatar-angela-gray.webp",
         username: "Angela Gray",
         notificationType: "followed you",
         target: "",
@@ -21,7 +21,7 @@ export const notificationsData = [
     },
     {
         id: 3,
-        avatar: "/images/avatar-jacob-thompson.webp",
+        avatar: "./images/avatar-jacob-thompson.webp",
         username: "Jacob Thompson",
         notificationType: "has joined your group",
         target: "Chess Club",
@@ -31,7 +31,7 @@ export const notificationsData = [
     },
     {
         id: 4,
-        avatar: "/images/avatar-rizky-hasanuddin.webp",
+        avatar: "./images/avatar-rizky-hasanuddin.webp",
         username: "Rizky Hasanuddin",
         notificationType: "sent you a private message",
         target: "",
@@ -41,7 +41,7 @@ export const notificationsData = [
     },
     {
         id: 5,
-        avatar: "/images/avatar-kimberly-smith.webp",
+        avatar: "./images/avatar-kimberly-smith.webp",
         username: "Kimberly Smith",
         notificationType: "commented on your picture",
         target: "",
@@ -51,7 +51,7 @@ export const notificationsData = [
     },
     {
         id: 6,
-        avatar: "/images/avatar-nathan-peterson.webp",
+        avatar: "./images/avatar-nathan-peterson.webp",
         username: "Nathan Peterson",
         notificationType: "reacted to your recent post",
         target: "5 end-game strategies to increase your win rate",
@@ -61,7 +61,7 @@ export const notificationsData = [
     },
     {
         id: 7,
-        avatar: "/images/avatar-anna-kim.webp",
+        avatar: "./images/avatar-anna-kim.webp",
         username: "Anna Kim",
         notificationType: "left the group",
         target: "Chess Club",
