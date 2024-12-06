@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/notification-list-react/static/css/main.0bfb7270.css",
-    "main.js": "/notification-list-react/static/js/main.e98a9765.js",
-    "index.html": "/notification-list-react/index.html",
-    "main.0bfb7270.css.map": "/notification-list-react/static/css/main.0bfb7270.css.map",
-    "main.e98a9765.js.map": "/notification-list-react/static/js/main.e98a9765.js.map"
+    "main.css": "/my-app/static/css/main.b0c6a6a3.css",
+    "main.js": "/my-app/static/js/main.e98a9765.js",
+    "index.html": "/my-app/index.html",
+    "main.b0c6a6a3.css.map": "/my-app/static/css/main.b0c6a6a3.css.map",
+    "main.e98a9765.js.map": "/my-app/static/js/main.e98a9765.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bfb7270.css",
+    "static/css/main.b0c6a6a3.css",
     "static/js/main.e98a9765.js"
   ]
 }
