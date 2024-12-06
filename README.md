@@ -1,42 +1,52 @@
-# Challenge : créer une page de notifications
+# Notifications Page Challenge
 
-![Aperçu](./design/desktop-preview.jpg)
+![Preview](./design/desktop-preview.jpg)
 
-## Bien le bonjour! 👋
+## Introduction 👋
 
-Ton objectif est de créer une page de notification en utilisant HTML, CSS et JS. Ton rendu final doit être le plus proche possible des maquettes du dossier `/design`.
+Welcome to the **Notifications Page Challenge**! The goal of this project is to create a responsive notifications page that matches the provided designs as closely as possible. This challenge focuses on building functionality and aesthetics using **React** and **Create React App (CRA)**, and styling with **CSS Modules**.
 
-Les utilisateurs devront être capables de :
+## Demo Link  
+[View Live Demo](https://ayman-alkhatib.github.io/notifications-list-react/
+)
 
-- Distinguer les notifications en fonction de leur statut "unread" et "read" ;
-- Sélectionner "Mark all as read" pour passer les notifications du visuel "unread" au visuel "read" ;
-- Sélectionner "Mark all as read" doit également permettre de faire tomber le nombre de messages non lus à 0 ;
-- Voir la page avec un design adapté à leur taille d'écran ;
-- Pour tous les éléments interactifs, voir les effets de "hover" que te montres l'image `active-states` du dossier `/design`.
+---
 
-## Tu as déjà une base !
+## Features  
+- **Unread and Read States**: Differentiate between unread and read notifications visually.
+- **Click to Mark as Read**:  
+  - Clicking on a notification will immediately set its state to "read" .  
+- **Mark All as Read**:  
+  - Updates the appearance of notifications from "unread" to "read."  
+  - Sets the unread notification count to **0**.  
+- **Responsive Design**:  
+  - Optimized for all screen sizes.  
+- **Hover Effects**:  
+  - Interactive elements include hover effects.
 
-Dans le dossier `/design`, tu trouveras une maquette des versions ordinateur & mobile.
+---
 
-Les maquettes sont au format JPG. Tu devras donc déduire par toi-même les bons styles de `font-size`, `padding` et `margin` pour que ça colle au mieux **et que ce soit bien responsive**
+## Technologies Used  
+- **React** with CRA  
+- **CSS Modules** for scoped styling  
+- **HTML5**, **CSS3**  
+- **JavaScript (ES6+)**  
 
-Toutes les éléments exterieurs dont tu auras besoin sont dans le dossier `/assets`. Tu y trouveras les typographies ainsi que les images à intégrer.
+---
 
-Enfin, tu trouveras un fichier `style-guide.md` qui contient les informations dont tu auras besoin comme la palette de couleurs ou quelles typographies.
-
-## Rome ne s'est pas faite en un jour ! 🏗️
-
-Pense donc à `fork` ce repository, à créer des `branches` et des `commits` réguliers. Avance petit pas après petit pas !
-
-Ton workflow, c'est ultra important et ça fait aussi partie des critères d'évaluation de ce challenge.
-
-## Mise en ligne
-
-Tu peux mettre en ligne ton projet gratuitement avec l'une des solutions ci-dessous :
-
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+## How to Run the Project Locally  
+1. **Clone the Repository**:  
+   ```bash
+   git clone https://github.com/ayman-alkhatib/notifications-list-react.git
+   cd notifications-list-react
+2. **Install Dependencies:**:
+   ```bash
+   npm install
+3. Start the Development Server:
+   ```bash
+   npm start
+Access the app at http://localhost:3000. 
+   
 
 Essaie-y-toi, c'est l'occasion d'apprendre !
 
