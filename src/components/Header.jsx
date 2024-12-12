@@ -1,7 +1,8 @@
+import useNotificationsData from "../useNotificationsData";
 import styles from "./Header.module.css";
-import { notificationsData } from "../notificationsData";
 import { useState } from "react";
 function Header({ setMarkAllAsUnRead }) {
+  const notificationsData = useNotificationsData();
   const [notificationActiveNum, setNotificationActiveNum] = useState(
     notificationsData.reduce((prev, cur) => {
       if (!cur.readStatus) return (prev = prev + 1);
