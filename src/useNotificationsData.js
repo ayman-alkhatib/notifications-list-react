@@ -11,21 +11,43 @@ function useNotificationsData() {
                 .order("created_at", { ascending: false }); // Default sorting
 
             if (error) console.error("Error fetching notifications:", error);
-            else setNotifications(notifications);
+            else {
+                setNotifications(notifications)
+
+            }
         };
         fetchNotifications();
+
 
         // Real-time subscription
         const channel = supabase
             .channel("notifications")
             .on(
                 "postgres_changes",
-                { event: "INSERT", schema: "public", table: "notifications" },
+                { event: "*", schema: "public", table: "notifications" },
                 (payload) => {
-                    setNotifications((prev) => [payload.new, ...prev]);
+                    switch (payload.eventType) {
+                        case 'INSERT':
+                            setNotifications((prevNotifications) => [payload.new, ...prevNotifications]);
+                            break;
+                        case 'UPDATE':
+                            setNotifications((prevNotifications) =>
+                                prevNotifications.map((notif) =>
+                                    notif.id === payload.new.id ? { ...notif, ...payload.new } : notif
+                                )
+                            );
+                            break;
+                        case 'DELETE':
+                            setNotifications((prevNotifications) =>
+                                prevNotifications.filter((notif) => notif.id !== payload.old.id)
+                            );
+                            break;
+                        default:
+                    }
                 }
             )
             .subscribe();
+
 
         return () => {
             supabase.removeChannel(channel);

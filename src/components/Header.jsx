@@ -1,28 +1,24 @@
-import useNotificationsData from "../useNotificationsData";
+import { supabase } from "../createSupabase";
 import styles from "./Header.module.css";
-import { useState } from "react";
-function Header({ setMarkAllAsUnRead }) {
-  const notificationsData = useNotificationsData();
-  const [notificationActiveNum, setNotificationActiveNum] = useState(
-    notificationsData.reduce((prev, cur) => {
-      if (!cur.readStatus) return (prev = prev + 1);
-      return prev;
-    }, 0)
-  );
+
+function Header({ unreadNum }) {
+  async function handleReadUpdate() {
+    const { error } = await supabase
+      .from("notifications")
+      .update({ readStatus: true })
+      .eq("readStatus", false);
+    if (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <header className={styles.header}>
       <h1>
-        Notifications <span>{notificationActiveNum}</span>
+        Notifications <span>{unreadNum}</span>
       </h1>
 
-      <button
-        onClick={() => {
-          setMarkAllAsUnRead(true);
-          setNotificationActiveNum(0);
-        }}
-      >
-        Mark all as read
-      </button>
+      <button onClick={handleReadUpdate}>Mark all as read</button>
     </header>
   );
 }

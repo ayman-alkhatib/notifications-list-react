@@ -2,24 +2,36 @@ import Avatar from "./NotificationCardComponents/Avatar";
 import styles from "./NotificationCard.module.css";
 import PostPicture from "./NotificationCardComponents/PostPicture";
 import TextBox from "./NotificationCardComponents/TextBox";
-import { useState } from "react";
+import { supabase } from "../createSupabase";
 
-function NotificationCard({ markAllAsUnRead, notificationObject }) {
+function NotificationCard({ notificationObject }) {
   let { id, avatar, notificationType, readStatus } = notificationObject;
-  const [isRead, setIsRead] = useState(readStatus);
 
-  if (markAllAsUnRead && !isRead) setIsRead(true);
+  async function handleReadUpdate() {
+    if (readStatus) return;
+
+    const { error } = await supabase
+      .from("notifications")
+      .update({ readStatus: true })
+      .eq("id", id);
+    if (error) {
+      console.error(error);
+    }
+  }
 
   return (
     <div
       onClick={() => {
-        setIsRead(true);
+        handleReadUpdate();
       }}
       id={id}
-      className={`${styles.notification} ${isRead ? "" : "active"}`}
+      className={`${styles.notification} ${readStatus ? "" : "active"}`}
     >
       <Avatar imgSrc={avatar} />
-      <TextBox notificationObject={notificationObject} isRead={isRead} />
+      <TextBox
+        notificationObject={notificationObject}
+        readStatus={readStatus}
+      />
       <PostPicture notificationType={notificationType} />
     </div>
   );
